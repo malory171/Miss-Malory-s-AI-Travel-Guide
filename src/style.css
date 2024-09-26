@@ -1,3 +1,59 @@
 body {
-  background-color: rgba(237, 237, 237, 0.9);
+  background-color: rgb(237, 237, 237);
+  font-family: "Handlee", cursive;
+}
+.logo {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 43px;
+  color: rgba(0, 0, 0, 1);
+}
+
+form {
+  background-color: rgb(237, 237, 237);
+  max-width: 480px;
+  margin: 30px auto;
+  margin-top: 0px;
+  text-align: center;
+  padding: 17px;
+  border-radius: 15px;
+  box-shadow: rgba(149, 142, 150, 0.5) 0px 15px 15px 0px;
+}
+.input {
+  font-family: "Handlee", cursive;
+  font-size: 17px;
+  border: none;
+  border-radius: 7px;
+  margin: 10px 0;
+  padding: 7px 20px;
+  width: 60%;
+}
+.submitButton {
+  background-color: rgba(108, 185, 193, 0.4);
+  font-family: "Handlee", cursive;
+  font-size: 17px;
+  border: none;
+  border-radius: 7px;
+  margin-left: 5px;
+  padding: 7px 20px;
+  width: 100px;
+}
+.container {
+  background-color: white;
+  max-width: 550px;
+  margin: 30px auto;
+  display: block;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: rgba(149, 142, 150, 0.6) 0px 20px 20px 0px;
+}
+a {
+  color: rgba(0, 116, 186, 1);
+}
+.footer {
+  text-align: center;
+  margin-bottom: 25px;
 }
