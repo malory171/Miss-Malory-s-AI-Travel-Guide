@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Miss Malory's AI Travel Guide</title>
   </head>
   <body>
@@ -21,7 +22,7 @@
     </header>
     <div class="container">
       <main>
-        <form>
+        <form id="country-information-generator-form">
           <input
             type="text"
             class="input"
@@ -32,7 +33,7 @@
           />
           <input type="submit" class="submitButton" />
         </form>
-        <div class="CountryInformation">
+        <div class="countryInformation" id="country-information">
           <h2>Country Overview</h2>
           <p>
             <strong>French Polynesia</strong> is an overseas collectivity of
