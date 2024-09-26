@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Miss Malory's AI Travel Guide</title>
   </head>
   <body>
@@ -26,6 +27,7 @@
           <input
             type="text"
             class="input"
+            id="user-instructions-input"
             placeholder="Enter a country..."
             autofocus
             required
@@ -34,149 +36,8 @@
           <input type="submit" class="submitButton" />
         </form>
         <div class="countryInformation" id="country-information">
-          <h2>Country Overview</h2>
-          <p>
-            <strong>French Polynesia</strong> is an overseas collectivity of
-            France, located in the South Pacific Ocean. It consists of 118
-            islands scattered over an area as large as Europe, but only 67
-            islands are inhabited. These islands are grouped into five main
-            archipelagos: the Society Islands (which include Tahiti and Bora
-            Bora), the Tuamotu Archipelago, the Marquesas Islands, the Gambier
-            Islands, and the Austral Islands. Known for its dramatic landscapes,
-            French Polynesia boasts lush mountains, crystal-clear lagoons, and
-            coral reefs, making it a favorite destination for those seeking
-            natural beauty and relaxation.
-          </p>
-
-          <h2>Population</h2>
-          <p>
-            As of 2023, French Polynesia has a population of about 280,000
-            people, with more than two-thirds of the population living on the
-            island of Tahiti, home to the capital city, Papeete. The population
-            is predominantly Polynesian, but there are also French and Chinese
-            communities, contributing to the cultural diversity of the region.
-          </p>
-
-          <h2>Languages Spoken</h2>
-          <p>
-            The official language of French Polynesia is French, used in
-            government, education, and media. However, Tahitian (Reo Tahiti) is
-            widely spoken and is a key element of cultural identity for the
-            indigenous Polynesians. Many inhabitants also speak English,
-            especially in tourist-heavy areas, as well as other Polynesian
-            dialects depending on the island group.
-          </p>
-
-          <h2>Cuisine</h2>
-          <p>
-            French Polynesian cuisine is an exotic blend of Polynesian, French,
-            and Asian influences. A staple of the local diet is seafood, often
-            freshly caught from the surrounding lagoons and oceans. Some of the
-            most iconic dishes include:
-          </p>
-          <ul>
-            <li>
-              <strong>Poisson Cru:</strong> A national dish consisting of raw
-              fish marinated in lime juice and coconut milk, often served with
-              vegetables.
-            </li>
-            <li>
-              <strong>Poulet Fafa:</strong> Chicken cooked with taro leaves,
-              flavored with coconut milk.
-            </li>
-            <li>
-              <strong>Chevrettes:</strong> Freshwater shrimp sautéed with garlic
-              and ginger, often served with rice.
-            </li>
-            <li>
-              <strong>French Pastries:</strong> Due to French influence, bread
-              and pastries, such as baguettes and croissants, are commonly
-              enjoyed, even in remote islands.
-            </li>
-            <li>
-              <strong>Tropical Fruits:</strong> Pineapple, papaya, mango, and
-              coconut are widely available and used in both savory dishes and
-              desserts.
-            </li>
-          </ul>
-
-          <h2>Famous Places to Visit</h2>
-          <ul>
-            <li>
-              <strong>Bora Bora:</strong> Known worldwide for its luxurious
-              overwater bungalows, turquoise lagoons, and white-sand beaches,
-              Bora Bora is often described as the "Pearl of the Pacific." The
-              island is a favorite among honeymooners and adventure seekers
-              alike, offering activities such as snorkeling, diving, and shark
-              feeding.
-            </li>
-            <li>
-              <strong>Tahiti:</strong> The largest island and the heart of
-              French Polynesia, Tahiti is home to the capital, Papeete. It
-              offers a mix of natural beauty and modern amenities, including
-              black-sand beaches, tropical waterfalls like Fautaua Falls, and a
-              bustling market (Marché de Papeete) where visitors can purchase
-              local crafts, fresh produce, and Tahitian pearls.
-            </li>
-            <li>
-              <strong>Moorea:</strong> Just a short ferry ride from Tahiti,
-              Moorea is famous for its rugged, volcanic landscape, clear blue
-              waters, and dense tropical vegetation. The island is a popular
-              spot for snorkeling, hiking, and experiencing traditional
-              Polynesian culture.
-            </li>
-            <li>
-              <strong>Rangiroa:</strong> Part of the Tuamotu Archipelago,
-              Rangiroa is one of the largest atolls in the world. It is a diving
-              paradise with coral reefs teeming with marine life, including
-              dolphins, manta rays, and sharks. The Pink Sands Beach and the
-              Blue Lagoon are other must-see attractions on this island.
-            </li>
-            <li>
-              <strong>Fakarava:</strong> A UNESCO Biosphere Reserve, Fakarava is
-              one of the best-preserved coral atolls in the world. It is ideal
-              for divers, offering crystal-clear waters and vibrant underwater
-              ecosystems filled with colorful fish, reef sharks, and pristine
-              coral gardens.
-            </li>
-            <li>
-              <strong>The Marquesas Islands:</strong> Remote and rugged, the
-              Marquesas Islands offer a stark contrast to the lagoon-filled
-              islands of the Society group. These islands are known for their
-              steep cliffs, deep valleys, and ancient archaeological sites. They
-              are a must-visit for adventure travelers seeking authentic
-              Polynesian culture and untamed nature.
-            </li>
-          </ul>
-
-          <h2>Culture and Traditions</h2>
-          <p>
-            French Polynesia has a rich cultural heritage deeply rooted in
-            Polynesian traditions. Dance and music play an important role, with
-            the <em>‘Ori Tahiti</em> (Tahitian dance) being a major part of
-            festivities. The Heiva festival, held annually in July, showcases
-            traditional dance, music, and sports. Polynesian tattooing, once
-            considered a sacred art form, is still prevalent today and holds
-            cultural significance. Local crafts, such as wood carvings, woven
-            hats, and tapa cloth, are also central to the culture.
-          </p>
-
-          <h2>Key Takeaway</h2>
-          <p>
-            French Polynesia is a dream destination for those seeking
-            paradise-like landscapes, rich cultural experiences, and a blend of
-            relaxation and adventure. Whether lounging on the pristine beaches
-            of Bora Bora, exploring the volcanic peaks of Moorea, or diving in
-            the coral-rich waters of Rangiroa, this exotic collection of islands
-            offers something for everyone.
-          </p>
+          <h2>Country information will be displayed here!</h2>
         </div>
-        <p id="wishings">
-          <strong>
-            Miss Malory's AI Travel Guide wishes you safe and unforgettable
-            travels! ✈️ Bon Voyage!
-          </strong>
-        </p>
       </main>
     </div>
     <footer>
