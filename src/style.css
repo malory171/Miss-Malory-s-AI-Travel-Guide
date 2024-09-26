@@ -50,10 +50,26 @@ form {
   border-radius: 15px;
   box-shadow: rgba(149, 142, 150, 0.6) 0px 20px 20px 0px;
 }
+.examples {
+  font-size: 15px;
+  margin-left: 25px;
+}
+.generating {
+  animation: blinker 1.8s linear infinite;
+  color: rgba(255, 138, 43, 0.7);
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.wishes {
+  color: rgba(0, 116, 186, 0.7);
+}
 a {
-  color: rgba(0, 116, 186, 1);
+  color: rgba(0, 116, 186, 0.9);
 }
 .footer {
   text-align: center;
-  margin-bottom: 25px;
+  margin: 0px 5px 25px 5px;
 }
