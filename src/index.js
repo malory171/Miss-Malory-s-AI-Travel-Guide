@@ -7,6 +7,15 @@ function generateCountryInformation(event) {
     delay: 1,
     cursor: "",
   });
+  new Typewriter("#wishings", {
+    strings: `<strong>
+            Miss Malory's AI Travel Guide wishes you safe and unforgettable
+            travels! ✈️ Bon Voyage!
+          </strong>`,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
 }
 
 let countryInformationFormElement = document.querySelector(
